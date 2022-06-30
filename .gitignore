@@ -1,0 +1,14 @@
+# Ignore all Git files except specified
+.git*
+!.gitignore
+!.gitkeep
+
+# Ignore Gulp package files
+node_modules
+package-lock.json
+
+# Ignore empty-task.js
+empty-task.js
+
+# Ignore test folder and files
+test*
