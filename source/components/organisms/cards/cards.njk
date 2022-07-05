@@ -1,0 +1,18 @@
+{#- cards.njk -#}
+
+{#- Component class -#}
+{% set class = 'cards' %}
+
+{#- Import used atoms & molecules -#}
+{% from "molecules/card/card.njk" import card as card %}
+
+{#- Template content -#}
+{% macro cards(cardGroup) -%}
+<section class="{{ class }}">
+  {% for cardItem in cardGroup %}
+    {{ card(
+      cardItem
+    ) }}
+  {% endfor %}
+</section>
+{%- endmacro %}
