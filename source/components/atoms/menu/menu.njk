@@ -1,0 +1,18 @@
+{#- menu.njk -#}
+
+{#- Component class -#}
+{% set class = 'menu' %}
+
+{#- Template content -#}
+{% macro menu(menuItems) -%}
+<nav class="{{ class }}">
+  <ul class="{{ class + '__list' }}">
+    {% for menuItemText, menuItemUrl in menuItems %}
+    <li class="{{ class + '__item'}}">
+      <a class="{{ class + '__link'}}" href="{{ menuItemUrl }}">
+        <span>{{ menuItemText }}</span></a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{%- endmacro %}
