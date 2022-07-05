@@ -1,0 +1,17 @@
+{#- image.njk -#}
+
+{#- Component class -#}
+{% set class = 'image' %}
+
+{#- Template content -#}
+{% macro image(img) -%}
+<figure class="{{ class }}">
+  {% if img.size %}
+  <div class="{{ class + '__area' }}" style="width:{{ img.size.width + 'px' }};height:{{ img.size.height + 'px' }};">
+    <img class="{{ class + '__img' }}" src="{{ img.source }}" alt="{{ img.alt }}" />
+  </div>
+  {% else %}
+  <img class="{{ class +'__img' }}" src="{{ img.source }}" alt="{{ img.alt }}" />
+  {% endif %}
+</figure>
+{%- endmacro %}
