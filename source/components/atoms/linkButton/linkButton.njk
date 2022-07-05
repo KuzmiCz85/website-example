@@ -1,0 +1,10 @@
+{#- linkButton.njk -#}
+
+{#- Component class -#}
+{% set class = 'linkButton' %}
+
+{#- Template content -#}
+{% macro linkButton(linkButtonText, linkButtonUrl) -%}
+<a class="{{ class }}" href="{{ linkButtonUrl }}">
+  <span class="{{ class + '__inner' }}">{{ linkButtonText }}</span></a>
+{%- endmacro %}
