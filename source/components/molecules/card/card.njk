@@ -1,0 +1,27 @@
+{#- card.njk -#}
+
+{#- Component class -#}
+{% set class = 'card' %}
+
+{#- Import used components -#}
+{% from "atoms/image/image.njk" import image as image %}
+
+{% macro card(cardFill) -%}
+<article class="{{ class }}">
+  <div class="{{ class + '__container' }}">
+    {% if cardFill.image %}
+      {{ image(
+        cardFill.image
+      ) }}
+    {% endif %}
+    {% if cardFill.heading -%}
+    <h3 class="{{ class + '__heading' }}">
+      {{ cardFill.heading }}</h3>
+    {% endif %}
+    {% if cardFill.text -%}
+    <p class="{{ class + '__text' }}">
+      {{ cardFill.text }}</p>
+    {% endif %}
+  </div>
+</article>
+{%- endmacro %}
