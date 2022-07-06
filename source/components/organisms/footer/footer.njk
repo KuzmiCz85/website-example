@@ -1,0 +1,14 @@
+{#- footer.njk -#}
+
+{#- Component class -#}
+{% set class = 'footer' %}
+
+{#- Import used atoms & molecules -#}
+
+{#- Template content -#}
+{% macro footer(footerContent) -%}
+<footer class="{{ class }}">
+  <p>
+    {{ footerContent }}</p>
+</footer>
+{%- endmacro %}
