@@ -1,0 +1,20 @@
+{#- header.njk -#}
+
+{#- Component class -#}
+{% set class = 'header' %}
+
+{#- Import used atoms & molecules -#}
+{% from "atoms/menu/menu.njk" import menu as menu %}
+
+{#- Template content -#}
+{% macro header() -%}
+<header class="{{ class }}">
+  {{ menu(
+    {
+      'Home' : '#',
+      'About Me' : '#',
+      'My work' : '#'
+    }
+) }}
+</header>
+{%- endmacro %}
