@@ -1,0 +1,28 @@
+{#- content.njk -#}
+
+{#- Component class -#}
+{% set class = 'content' %}
+
+{#- Import used atoms & molecules -#}
+{% from "atoms/image/image.njk" import image as image %}
+{% from "atoms/linkButton/linkButton.njk" import linkButton as linkButton %}
+
+{#- Template content -#}
+{% macro content(contentFill) -%}
+<main class="{{ class }}">
+  <article "{{ class + '__container' }}">
+    <h1 class="{{ class + '__heading' }}">
+      {{ contentFill.heading }}</h1>
+    <p "{{ class + '__text' }}">
+      {{ contentFill.text }}</p>
+    {{ linkButton(
+      contentFill.linkButton.text, contentFill.linkButton.url
+    ) }}
+  </article>
+  {% if contentFill.image %}
+    {{ image(
+      contentFill.image
+    ) }}
+  {% endif %}
+</main>
+{%- endmacro %}
