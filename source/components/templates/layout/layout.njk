@@ -5,14 +5,81 @@
 {#- {% set class = 'layout' %} -#}
 
 {#- Import used components -#}
+{% from "organisms/cards/cards.njk" import cards as cards %}
+{% from "organisms/content/content.njk" import content as content %}
+{% from "organisms/footer/footer.njk" import footer as footer %}
+{% from "organisms/header/header.njk" import header as header %}
 
 {#- Template content -#}
 <!DOCTYPE html>
 <html lang="en">
 {% include "utilities/head/head.njk" %}
 <body>
-  {% block pageContent %}
-  {% endblock %}
+  {{ header() }}
+  {{ content(
+    {
+      heading: 'Content heading',
+      text: 'Content text',
+      linkButton: {
+        text: 'Content linkButton text',
+        url: '#'
+      },
+      image: {
+        size: {
+          width: '405',
+          height: '540'
+        },
+        source: 'content/source/image.img',
+        alt: 'Content image 405 x 540 px'
+      }
+    }
+  ) }}
+  {{ cards(
+    {
+      heading: 'Cards heading',
+      cards: [
+        {
+          image: {
+            size: {
+              width: '425',
+              height: '270'
+            },
+            source: 'cards/source/image.img',
+            alt: 'Card image 425 x 270 px'
+          },
+          heading: 'Card heading',
+          text: 'Card with image, heading & text'
+        },
+        {
+          image: {
+            size: {
+              width: '425',
+              height: '270'
+            },
+            source: 'cards/source/image.img',
+            alt: 'Card image 425 x 270 px'
+          },
+          heading: 'Card heading',
+          text: 'Card with image, heading & text'
+        },
+        {
+          image: {
+            size: {
+              width: '425',
+              height: '270'
+            },
+            source: 'cards/source/image.img',
+            alt: 'Card image 425 x 270 px'
+          },
+          heading: 'Card heading',
+          text: 'Card with image, heading & text'
+        }
+      ]
+    }
+  ) }}
+  {{ footer(
+    'Footer content'
+  ) }}
   {% include "utilities/script/script.njk" %}
 </body>
 </html>

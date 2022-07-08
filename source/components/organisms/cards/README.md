@@ -6,7 +6,7 @@ Organism
 
 ## Description
 
-Group of multiple article preview cards.
+Section with main heading (optional) and group of multiple article preview cards.
 
 ## Using in other njk templates
 
@@ -20,7 +20,9 @@ Group of multiple article preview cards.
 
 ```
 {{ cards(
-    [
+  {
+    heading: 'Cards section heading',
+    cards: [
       {
         image: {
           source: 'card/image/source.img',
@@ -48,5 +50,6 @@ Group of multiple article preview cards.
         heading: 'Card only with image & heading'
       }
     ]
-  ) }}
+  }
+) }}
 ```

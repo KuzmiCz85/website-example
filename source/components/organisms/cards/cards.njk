@@ -7,11 +7,15 @@
 {% from "molecules/card/card.njk" import card as card %}
 
 {#- Template content -#}
-{% macro cards(cardGroup) -%}
+{% macro cards(cardsFill) -%}
 <section class="{{ class }}">
-  {% for cardItem in cardGroup %}
+  {% if cardsFill.heading %}
+  <h2>
+    {{ cardsFill.heading }}</h2>
+  {% endif %}
+  {% for cardsItem in cardsFill.cards %}
     {{ card(
-      cardItem
+      cardsItem
     ) }}
   {% endfor %}
 </section>
