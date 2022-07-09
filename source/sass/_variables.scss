@@ -3,4 +3,14 @@
  * Defines variables used in scss files and components
  */
 
-/*! variables imported */
+/* Colors */
+// Basic
+$color_white: #fff;
+
+// Primary
+$color_primary: #333;
+$color_primary_light: lighten($color_primary, 1%);
+
+// Secondary
+$color_secondary: #3697a7;
+$color_secondary_dark: darken($color_secondary, 23%);
