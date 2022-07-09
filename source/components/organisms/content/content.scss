@@ -1,3 +1,19 @@
 /* content.scss */
 
-/*! .content stylesheet */
+.content {
+  &__heading {
+    margin: 65px 35px;
+  }
+
+  &__text {
+    margin: 65px 35px;
+  }
+
+  /* Adjust image */
+  .image {
+    /* Rounded borders */
+    @include rounded-borders(75px, 35px, solid, $color_primary_light);
+
+    max-width: 405px;
+  }
+}
