@@ -10,7 +10,7 @@
     {% for menuItemText, menuItemUrl in menuItems %}
     <li class="{{ class + '__item'}}">
       <a class="{{ class + '__link'}}" href="{{ menuItemUrl }}">
-        <span>{{ menuItemText }}</span></a>
+        <span class="{{ class + '__button'}}">{{ menuItemText }}</span></a>
     </li>
     {% endfor %}
   </ul>
