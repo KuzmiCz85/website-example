@@ -5,6 +5,8 @@
 
 {#- Template content -#}
 {% macro linkButton(linkButtonText, linkButtonUrl) -%}
-<a class="{{ class }}" href="{{ linkButtonUrl }}">
-  <span class="{{ class + '__inner' }}">{{ linkButtonText }}</span></a>
+<div class="{{ class }}">
+  <a class="{{ class + '__link' }}" href="{{ linkButtonUrl }}">
+    <span class="{{ class + '__button' }}">{{ linkButtonText }}</span></a>
+</div>
 {%- endmacro %}
