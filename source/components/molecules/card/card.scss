@@ -1,3 +1,23 @@
 /* card.scss */
 
-/*! .card stylesheet */
+.card {
+  /* Rounded borders */
+  @include rounded-borders(75px, 35px, solid, $color_primary_light);
+
+  max-width: 425px;
+  margin: auto;
+  text-align: left;
+
+  &__container {
+    background: $color_secondary;
+    padding-bottom: 20px;
+  }
+
+  &__heading {
+    margin: 20px;
+  }
+
+  &__text {
+    margin: 20px;
+  }
+}
