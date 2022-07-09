@@ -1,3 +1,7 @@
 /* cards.scss */
 
-/*! .cards stylesheet */
+.cards {
+  &__heading {
+    margin: 25px;
+  }
+}
