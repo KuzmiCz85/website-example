@@ -1,3 +1,14 @@
 /* header.scss */
 
-/*! .header stylesheet */
+.header {
+  /* Rounded borders */
+  @include rounded-borders(60px, 35px, solid, $color_primary_light);
+
+  background: $color_secondary_dark;
+
+  /* Adjust border */
+  border-width: 0 10px 35px;
+  border-radius: 0;
+  border-bottom-left-radius: 60px 10px;
+  border-bottom-right-radius: 60px 10px;
+}
