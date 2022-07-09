@@ -3,4 +3,8 @@
  * Mixins for scss files and components
  */
 
-/*! mixins imported */
+/* Rounded borders */
+@mixin rounded-borders($border_radius, $border_size, $border-style, $border_color) {
+  border: $border_size $border-style $border_color;
+  border-radius: ($border_radius);
+}
