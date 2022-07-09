@@ -3,4 +3,9 @@
  * General elements styles
  */
 
-/*! base imported */
+body {
+  color: $color_white;
+  text-align: center;
+  line-height: 1;
+  background: $color_primary;
+}
