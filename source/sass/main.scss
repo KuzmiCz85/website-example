@@ -1,22 +1,22 @@
 /**
  * main.scss
- * Connects all non-component scss files
+ * Connects all scss files together in order
  */
 
-// Settings
+/* Settings */
 @import "variables";
 
-// External libraries
+/* External libraries */
 // normalize.scss - browsers render all elements more consistently
 @import "libs/normalize";
 
-// Mixins
+/* Mixins */
 @import "mixins";
 
-// General
+/* General */
 @import "base";
 
-// Components
+/* Components */
 // Atoms
 @import "../components/atoms/atoms";
 // Molecules
