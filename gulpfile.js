@@ -23,6 +23,7 @@ function callTask(taskName) {
 task('clean', callTask('clean'));
 task('css', callTask('styles'));
 task('cssLint', callTask('styles-lint'));
+task('fonts', callTask('fonts'));
 task('js', callTask('scripts'));
 task('jsLint', callTask('scripts-lint'));
 task('html', callTask('html'));

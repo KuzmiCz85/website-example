@@ -51,6 +51,12 @@ module.exports = {
     watch: './source/js/**/*.js'
   },
 
+  // fonts
+  fonts: {
+    source: './source/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+    target: `${dist}/fonts/`
+  },
+
   // html
   html: {
     source: './source/components/pages/*.{html,htm,php}',
