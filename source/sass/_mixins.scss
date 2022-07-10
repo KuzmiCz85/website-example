@@ -3,6 +3,26 @@
  * Mixins for scss files and components
  */
 
+/* Responsible bottom space */
+@mixin responsible-bottom-space {
+  margin: 0 0 25px 0;
+
+  /* Screens larger than 600px */
+  @media only screen and (min-width: $mq_s) {
+    margin: 0 0 50px 0;
+  }
+
+  /* Screens larger than 768px */
+  @media only screen and (min-width: $mq_m) {
+    margin: 0 0 100px 0;
+  }
+
+  /* Add features for screens larger than 1200px */
+  @media only screen and (min-width: $mq_xl) {
+    margin: 0 0 200px 0;
+  }
+}
+
 /* Rounded borders */
 @mixin rounded-borders($border_radius, $border_size, $border-style, $border_color) {
   border: $border_size $border-style $border_color;
