@@ -2,8 +2,10 @@
 
 .header {
   /* Rounded borders */
+  @include responsible-bottom-space;
   @include rounded-borders(60px, 35px, solid, $color_primary_light);
 
+  display: block;
   background: $color_secondary_dark;
 
   /* Adjust border */
@@ -11,4 +13,26 @@
   border-radius: 0;
   border-bottom-left-radius: 60px 10px;
   border-bottom-right-radius: 60px 10px;
+
+  &__container {
+    max-width: $mq_max;
+    margin: auto;
+  }
+
+  /* Adjust .menu element */
+  .menu {
+    &__list {
+      /* Screens larger than 768px */
+      @media only screen and (min-width: $mq_m) {
+        text-align: right;
+      }
+    }
+
+    &__item {
+      /* Screens larger than 600px */
+      @media only screen and (min-width: $mq_s) {
+        display: inline-block;
+      }
+    }
+  }
 }

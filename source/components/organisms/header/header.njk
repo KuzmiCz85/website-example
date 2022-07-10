@@ -9,12 +9,14 @@
 {#- Template content -#}
 {% macro header() -%}
 <header class="{{ class }}">
-  {{ menu(
-    {
-      'Home' : '#',
-      'About Me' : '#',
-      'My work' : '#'
-    }
-) }}
+  <div class="{{ class + '__container'}}">
+    {{ menu(
+      {
+        'Home' : '#',
+        'About Me' : '#',
+        'My work' : '#'
+      }
+    ) }}
+  </div>
 </header>
 {%- endmacro %}
