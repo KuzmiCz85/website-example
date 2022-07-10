@@ -9,16 +9,18 @@
 {#- Template content -#}
 {% macro cards(cardsFill) -%}
 <section class="{{ class }}">
-  {% if cardsFill.heading %}
-  <h2 class="{{ class + '__heading' }}">
-    {{ cardsFill.heading }}</h2>
-  {% endif %}
   <div class="{{ class + '__container' }}">
-  {% for cardsItem in cardsFill.cards %}
-    {{ card(
-      cardsItem
-    ) }}
-  {% endfor %}
+    {% if cardsFill.heading %}
+    <h2 class="{{ class + '__heading' }}">
+      {{ cardsFill.heading }}</h2>
+    {% endif %}
+    <div class="{{ class + '__cardList' }}">
+      {% for cardsItem in cardsFill.cards %}
+        {{ card(
+          cardsItem
+        ) }}
+      {% endfor %}
+    </div>
   </div>
 </section>
 {%- endmacro %}

@@ -1,7 +1,49 @@
 /* cards.scss */
 
 .cards {
+  @include responsible-bottom-space;
+
+  display: block;
+
+  &__container {
+    max-width: $mq_max;
+    margin: auto;
+  }
+
+  &__cardList {
+    /* Screen larger than 600px */
+    @media only screen and (min-width: $mq_s) {
+      display: flex;
+      flex-direction: column;
+
+      /* Screen larger than max page width 1485px */
+      @media only screen and (min-width: $mq_max) {
+        flex-direction: row;
+      }
+    }
+
+    /* Adjust .card element */
+    .card {
+      @include rounded-borders(75px, 35px, solid, $color_primary_light);
+
+      max-width: 425px;
+      margin: auto;
+
+      /* Screen larger than max page width 1485px */
+      @media only screen and (min-width: $mq_max) {
+        margin: 0;
+      }
+    }
+  }
+
   &__heading {
-    margin: 25px;
+    margin: 14px 35px;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    /* Screen larger than max page width 1485px */
+    @media only screen and (min-width: $mq_max) {
+      text-align: left;
+    }
   }
 }
