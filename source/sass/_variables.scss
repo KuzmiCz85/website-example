@@ -14,3 +14,9 @@ $color_primary_light: lighten($color_primary, 1%);
 // Secondary
 $color_secondary: #3697a7;
 $color_secondary_dark: darken($color_secondary, 23%);
+
+/* Breakpoints */
+$mq_s: 600px; // small display
+$mq_m: 768px; // medium display
+$mq_xl: 1200px; // extra large display
+$mq_max: 1485px; // max width of page
