@@ -8,7 +8,9 @@
 {#- Template content -#}
 {% macro footer(footerContent) -%}
 <footer class="{{ class }}">
-  <p>
-    {{ footerContent }}</p>
+  <div class="{{ class + '__container'}}">
+    <p class="{{ class + '__text'}}">
+      {{ footerContent }}</p>
+  </div>
 </footer>
 {%- endmacro %}

@@ -1,3 +1,14 @@
 /* footer.scss */
 
-/*! .footer stylesheet */
+.footer {
+  display: block;
+
+  &__container {
+    max-width: $mq_max;
+    margin: auto;
+  }
+
+  &__text {
+    margin: 40px;
+  }
+}
