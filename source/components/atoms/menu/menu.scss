@@ -5,10 +5,16 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    /* Remove inline block whitespace */
+    font-size: 0;
   }
 
   &__item {
-    padding: 25px;
+    padding: 25px 35px;
+
+    /* Restore font-size from 0 */
+    font-size: 16px;
   }
 
   &__link {
