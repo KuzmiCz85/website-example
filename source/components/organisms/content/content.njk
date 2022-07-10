@@ -10,19 +10,21 @@
 {#- Template content -#}
 {% macro content(contentFill) -%}
 <main class="{{ class }}">
-  <article class="{{ class + '__container' }}">
-    <h1 class="{{ class + '__heading' }}">
-      {{ contentFill.heading }}</h1>
-    <p class="{{ class + '__text' }}">
-      {{ contentFill.text }}</p>
-    {{ linkButton(
-      contentFill.linkButton.text, contentFill.linkButton.url
-    ) }}
-  </article>
-  {% if contentFill.image %}
-    {{ image(
-      contentFill.image
-    ) }}
-  {% endif %}
+  <div class="{{ class + '__container' }}">
+    <article class="{{ class + '__article' }}">
+      <h1 class="{{ class + '__heading' }}">
+        {{ contentFill.heading }}</h1>
+      <p class="{{ class + '__text' }}">
+        {{ contentFill.text }}</p>
+      {{ linkButton(
+        contentFill.linkButton.text, contentFill.linkButton.url
+      ) }}
+    </article>
+    {% if contentFill.image %}
+      {{ image(
+        contentFill.image
+      ) }}
+    {% endif %}
+  </div>
 </main>
 {%- endmacro %}

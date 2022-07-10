@@ -1,19 +1,82 @@
 /* content.scss */
 
 .content {
+  @include responsible-bottom-space;
+
+  display: block;
+
+  &__container {
+    margin: auto;
+    max-width: $mq_max;
+
+    /* Screens larger than 600px */
+    @media only screen and (min-width: $mq_s) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+
+      /* Add features for screens larger than 1200px */
+      @media only screen and (min-width: $mq_xl) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__article {
+    max-width: $mq_m;
+
+    /* Screens larger than 768px */
+    @media only screen and (min-width: $mq_m) {
+      flex-basis: 275px;
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
+
   &__heading {
     margin: 65px 35px;
+    font-size: 40px;
+    text-transform: uppercase;
   }
 
   &__text {
     margin: 65px 35px;
+    font-size: 16px;
+    text-align: justify;
+
+    /* Screens larger than 1200px */
+    @media only screen and (min-width: $mq_xl) {
+      text-align: left;
+    }
   }
 
-  /* Adjust image */
+  /* Adjust .image element */
   .image {
     /* Rounded borders */
     @include rounded-borders(75px, 35px, solid, $color_primary_light);
 
     max-width: 405px;
+    margin: auto;
+
+    /* Screens larger than 600px */
+    @media only screen and (min-width: $mq_s) {
+      margin: 0;
+    }
+  }
+
+  /* Adjust .linkButton element */
+  .linkButton {
+    @include rounded-borders(75px, 30px, solid, $color_primary_light);
+
+    max-width: 340px;
+
+    /* Screens larger than 768px */
+    @media only screen and (min-width: $mq_m) {
+      margin: 0;
+    }
+
+    /* Adjust border */
+    border-width: 40px 30px;
   }
 }
