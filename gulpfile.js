@@ -31,5 +31,25 @@ task('img', callTask('images'));
 task('newTask', callTask('new-task'));
 task('watch', callTask('watch'));
 
+// Build task
+task('build',
+  series(
+    task('clean'),
+    parallel(
+      task('html'),
+      series(
+        task('cssLint'),
+        task('css')
+      ),
+      series(
+        task('jsLint'),
+        task('js')
+      ),
+      task('fonts'),
+      task('img')
+    )
+  )
+);
+
 // Default task
 task('default', task('watch'));
