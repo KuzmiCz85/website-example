@@ -16,69 +16,74 @@
 {% include "utilities/head/head.njk" %}
 <body>
   {{ header() }}
-  {{ content(
-    {
-      heading: 'Content heading',
-      text: 'Content text',
-      linkButton: {
-        text: 'Content linkButton text',
-        url: '#'
-      },
-      image: {
-        size: {
-          width: '405',
-          height: '540'
+  {% if pageContent %}
+    {% block pageBlock %}
+    {% endblock %}
+  {% else %}
+    {{ content(
+      {
+        heading: 'Content heading',
+        text: 'Content text',
+        linkButton: {
+          text: 'Content linkButton text',
+          url: '#'
         },
-        source: 'content/source/image.img',
-        alt: 'Content image 405 x 540 px'
-      }
-    }
-  ) }}
-  {{ cards(
-    {
-      heading: 'Cards heading',
-      cards: [
-        {
-          image: {
-            size: {
-              width: '425',
-              height: '270'
-            },
-            source: 'cards/source/image.img',
-            alt: 'Card image 425 x 270 px'
+        image: {
+          size: {
+            width: '405',
+            height: '540'
           },
-          heading: 'Card heading',
-          text: 'Card with image, heading & text'
-        },
-        {
-          image: {
-            size: {
-              width: '425',
-              height: '270'
-            },
-            source: 'cards/source/image.img',
-            alt: 'Card image 425 x 270 px'
-          },
-          heading: 'Card heading',
-          text: 'Card with image, heading & text'
-        },
-        {
-          image: {
-            size: {
-              width: '425',
-              height: '270'
-            },
-            source: 'cards/source/image.img',
-            alt: 'Card image 425 x 270 px'
-          },
-          heading: 'Card heading',
-          text: 'Card with image, heading & text'
+          source: 'content/source/image.img',
+          alt: 'Content image 405 x 540 px'
         }
-      ]
-    }
-  ) }}
+      }
+    ) }}
+    {{ cards(
+      {
+        heading: 'Cards heading',
+        cards: [
+          {
+            image: {
+              size: {
+                width: '425',
+                height: '270'
+              },
+              source: 'cards/source/image.img',
+              alt: 'Card image 425 x 270 px'
+            },
+            heading: 'Card heading',
+            text: 'Card with image, heading & text'
+          },
+          {
+            image: {
+              size: {
+                width: '425',
+                height: '270'
+              },
+              source: 'cards/source/image.img',
+              alt: 'Card image 425 x 270 px'
+            },
+            heading: 'Card heading',
+            text: 'Card with image, heading & text'
+          },
+          {
+            image: {
+              size: {
+                width: '425',
+                height: '270'
+              },
+              source: 'cards/source/image.img',
+              alt: 'Card image 425 x 270 px'
+            },
+            heading: 'Card heading',
+            text: 'Card with image, heading & text'
+          }
+        ]
+      }
+    ) }}
+  {% endif %}
   {{ footer(
-    'Footer content'
+    '&copy; Jack Jackson 2020' | safe
   ) }}
   {% include "utilities/script/script.njk" %}
 </body>
