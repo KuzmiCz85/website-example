@@ -1,11 +1,13 @@
 /**
  * _base.scss
- * General elements styles
+ * General elements settings
  */
 
 body {
   color: $color_white;
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   line-height: 1;
+  text-align: center;
   background: $color_primary;
 }
