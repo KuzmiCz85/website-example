@@ -11,10 +11,12 @@
   }
 
   &__item {
-    padding: 25px 35px;
+    padding: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
 
     /* Restore font-size from 0 */
-    font-size: 16px;
+    font-size: 20px;
   }
 
   &__link {
