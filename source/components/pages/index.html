@@ -4,10 +4,60 @@
 {% extends "templates/layout/layout.njk" %}
 
 {#- Page title -#}
-{% set pageTitle = 'Page specific title' %}
+{% set pageTitle = 'Jack Jackson' %}
 
 {#- Template content -#}
-{% block pageContent %}
-<p>
-  Index page specific content</p>
+{% block pageBlock %}
+  {{ content(pageContent.content) }}
+  {{ cards(pageContent.cards) }}
 {% endblock %}
+
+{#- Page specific content -#}
+{% set pageContent =
+  {
+    content: {
+      heading: 'Jack Jackson',
+      text: 'What a bounder joseph stalin groomed sportacus testosterone trophy freestyle derek griffiths robot moustache,
+        derek griffiths groomed testosterone trophy marques of queensbury freestyle joseph stalin robot moustache
+        Nostrilis tickler sportacus what a boulder groomed?',
+      linkButton: {
+        text: 'Learn more',
+        url: '#'
+      },
+      image: {
+        source: 'images/girl.jpg',
+        alt: 'Girl with teacup'
+      }
+    },
+    cards:
+    {
+      heading: 'What I did',
+      cards: [
+        {
+          image: {
+            source: 'images/epic-project.jpg',
+            alt: 'Epic project'
+          },
+          heading: 'Epic project',
+          text: 'Awesome project I did in 2018. It was big experience for me.'
+        },
+        {
+          image: {
+            source: 'images/another-work.jpg',
+            alt: 'Another work I did'
+          },
+          heading: 'Another work I did',
+          text: 'Awesome project I did in 2018. It was big experience for me.'
+        },
+        {
+          image: {
+            source: 'images/rebrand-company.jpg',
+            alt: 'Rebrand of this company'
+          },
+          heading: 'Rebrand of this company',
+          text: 'Awesome project I did in 2018. It was big experience for me.'
+        }
+      ]
+    }
+  }
+%}
