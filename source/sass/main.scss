@@ -13,8 +13,11 @@
 /* Mixins */
 @import "mixins";
 
-/* General */
+/* General settings and attributes */
+// Basic attributes settings
 @import "base";
+// Web fonts
+@import "fonts";
 
 /* Components */
 // Atoms
